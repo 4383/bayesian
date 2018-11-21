@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{pdflscape}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx} % \scalebox
+\usepackage{environ}
+\pagenumbering{gobble} 
+\title{Bayesian Theorem}
+\NewEnviron{myequation}{%
+\begin{equation}
+\scalebox{5.5}{$\BODY$}
+\end{equation}
+}
+\begin{document}
+\begin{landscape}
+%% Don't leave this line empty
+\begin{myequation}%
+P(A_i|\textbf{B}) = \frac{P(A_i) \cdot P(\textbf{B}|A_i)} {P(\textbf{B})}%
+\end{myequation}
+%
+\newline
+$P(A_i|\textbf{B})$ désigne la probabilité à postériori, c'est à dire le degré de confiance après la prise en compte des observations
+\newline
+$P(A_i)$ désigne la probabilité à priori, c'est à dire le degré de confiance que l'on a vis-à-vis de l'hypothèse $A$
+\newline
+$P(\textbf{B}|A_i)$ désigne vraisemblance, c'est à dire le degré de compatibilité de l'hypothèse $A$ et des observations $\textbf{B}$
+\newline
+$P(\textbf{B})$ désigne la probabilité d'observation, c'est à dire la probabilité que l'observation survienne dans un cas de figure quelconque
+\end{landscape}
+\end{document}
